@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Evolve Or Die — the book by Ordinix Limited. Subscribe for updates and early access." />
+    <title>Evolve Or Die | Ordinix Limited</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" src="/src/book.ts"></script>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">
+          <span class="logo-mark">O</span>
+          <span class="logo-text">Ordinix</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/#services" class="nav-link">Services</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+          <a href="/" class="nav-link nav-cta">Back to Site</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <main class="book-page">
+      <section class="book-hero">
+        <div class="book-hero-bg" aria-hidden="true">
+          <div class="book-grid-overlay"></div>
+          <div class="book-glow"></div>
+        </div>
+        <div class="book-hero-content">
+          <div class="book-cover reveal">
+            <div class="book-cover-face">
+              <div class="book-cover-spine"></div>
+              <div class="book-cover-content">
+                <span class="book-cover-label">A Book by Ordinix</span>
+                <h2 class="book-cover-title">Evolve<br />Or Die</h2>
+                <div class="book-cover-line"></div>
+                <span class="book-cover-sub">The Architect's Guide to Digital Transformation</span>
+              </div>
+              <div class="book-cover-shadow"></div>
+            </div>
+          </div>
+          <div class="book-hero-text reveal">
+            <span class="section-label">Coming Soon</span>
+            <h1 class="book-title">Evolve Or Die</h1>
+            <p class="book-subtitle">
+              The architect's guide to thriving in an era of relentless
+              digital disruption. For leaders who refuse to be left behind.
+            </p>
+            <p class="book-desc">
+              Drawing on 25+ years of mission-critical transformations,
+              <em>Evolve Or Die</em> lays out the frameworks, hard-won
+              lessons, and strategic patterns that separate organisations
+              that adapt from those that fade. A practical playbook for
+              C-suite leaders and architects navigating AI, data, and
+              cloud-native transformation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe-section">
+        <div class="container">
+          <div class="subscribe-card reveal">
+            <div class="subscribe-glow" aria-hidden="true"></div>
+            <h2>Subscribe for updates</h2>
+            <p class="subscribe-desc">
+              Get notified when the book launches — plus early excerpts and
+              insights delivered to your inbox.
+            </p>
+
+            <form
+              class="subscribe-form"
+              id="subscribeForm"
+              action="https://formsubmit.co/hello@ordinix.co.uk"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="Evolve Or Die — New Subscription" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="" id="nextUrl" />
+              <input type="hidden" name="source" value="Evolve Or Die Book Page" />
+
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <span class="btn-text">Subscribe</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+            </form>
+
+            <div class="form-success" id="formSuccess" hidden>
+              <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+              </div>
+              <h3>Almost there!</h3>
+              <p>
+                Check your inbox for a confirmation email from FormSubmit to
+                complete your subscription. This one-time step protects your
+                address from spam.
+              </p>
+            </div>
+
+            <p class="form-note">
+              No spam. Unsubscribe anytime. Your email is never shared.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="book-topics">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-label">What's Inside</span>
+            <h2 class="section-title">Themes the book explores</h2>
+          </div>
+          <div class="topics-grid">
+            <div class="topic-item reveal">
+              <span class="topic-num">01</span>
+              <h3>AI-First Orchestration</h3>
+              <p>Building enterprise frameworks for agentic workflows and intelligent automation.</p>
+            </div>
+            <div class="topic-item reveal">
+              <span class="topic-num">02</span>
+              <h3>Data as Competitive Advantage</h3>
+              <p>From lakehouse to data mesh — governance strategies that unlock real value.</p>
+            </div>
+            <div class="topic-item reveal">
+              <span class="topic-num">03</span>
+              <h3>Integration & Connectivity</h3>
+              <p>API-first architectures and ecosystem governance for seamless enterprise operations.</p>
+            </div>
+            <div class="topic-item reveal">
+              <span class="topic-num">04</span>
+              <h3>Cloud-Native Resilience</h3>
+              <p>Scalable, secure microservices across AWS, Azure, and Kubernetes.</p>
+            </div>
+            <div class="topic-item reveal">
+              <span class="topic-num">05</span>
+              <h3>Strategic Discovery</h3>
+              <p>Fail-fast validation and sandbox spikes to de-risk architectural investment.</p>
+            </div>
+            <div class="topic-item reveal">
+              <span class="topic-num">06</span>
+              <h3>Bridging Vision & Execution</h3>
+              <p>How to align C-suite strategy with engineering delivery — every time.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="nav-logo">
+              <span class="logo-mark">O</span>
+              <span class="logo-text">Ordinix</span>
+            </a>
+            <p class="footer-tagline">
+              Principal Architect & Strategic Advisory
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="/#services">Services</a>
+            <a href="/#approach">Approach</a>
+            <a href="/#about">About</a>
+          </div>
+          <div class="footer-col">
+            <h4>Engage</h4>
+            <a href="/#contact">Contact</a>
+            <a href="/book.html">Evolve Or Die</a>
+            <a href="mailto:hello@ordinix.co.uk">Email</a>
+          </div>
+          <div class="footer-col">
+            <h4>Details</h4>
+            <span>Founded 2016</span>
+            <span>2–10 employees</span>
+            <span>Technology, Information & Internet</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; <span id="year">2026</span> Ordinix Limited. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
