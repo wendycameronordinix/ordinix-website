@@ -3,7 +3,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   build: {
-    outDir: 'dist',  // Make sure this is set
+    outDir: 'dist',
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
