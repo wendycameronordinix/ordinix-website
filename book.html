@@ -34,9 +34,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .navbar.scrolled{padding:12px 0;background:rgba(7,11,20,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:var(--border)}
 .nav-container{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:600;font-size:1.25rem;letter-spacing:-0.02em}
-.logo-mark{width:48px;height:48px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary-500),var(--secondary-500));border-radius:12px;font-weight:700;font-size:1.4rem;color:#fff;box-shadow:0 4px 20px rgba(31,102,240,0.35);transition:transform var(--transition)}
-.nav-logo:hover .logo-mark{transform:rotate(-6deg) scale(1.05)}
-.logo-text{color:var(--text)}
+.brand-logo{display:block;width:190px;height:58px;object-fit:cover;object-position:center;transition:transform var(--transition);filter:drop-shadow(0 4px 14px rgba(14,165,233,0.14))}
+.nav-logo:hover .brand-logo{transform:scale(1.03)}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-link{font-size:0.9rem;font-weight:500;color:var(--text-muted);transition:color var(--transition);position:relative}
 .nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--primary-400);transition:width var(--transition)}
@@ -74,8 +73,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 
 /* Book cover 3D */
 .book-cover{perspective:1500px;display:flex;justify-content:center}
-.book-cover-face{position:relative;width:280px;height:400px;border-radius:4px 12px 12px 4px;background:linear-gradient(135deg,#0a1628,#0d2030);border:1px solid rgba(255,255,255,0.1);box-shadow:-4px 4px 0 rgba(0,0,0,0.2),0 30px 60px rgba(0,0,0,0.5),inset 0 0 40px rgba(16,185,129,0.05);transform:rotateY(-15deg) rotateX(5deg);transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);overflow:hidden}
+.book-cover-face{position:relative;width:280px;height:400px;border-radius:4px 12px 12px 4px;background:#020617;border:1px solid rgba(255,255,255,0.1);box-shadow:-4px 4px 0 rgba(0,0,0,0.2),0 30px 60px rgba(0,0,0,0.5),inset 0 0 40px rgba(16,185,129,0.05);transform:rotateY(-15deg) rotateX(5deg);transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);overflow:hidden}
 .book-cover-face:hover{transform:rotateY(-5deg) rotateX(2deg)}
+.book-cover-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center} 
+.book-cover-face .book-cover-spine,.book-cover-face .book-cover-content,.book-cover-face .book-cover-shadow{display:none}
 .book-cover-spine{position:absolute;top:0;left:0;width:12px;height:100%;background:linear-gradient(to right,rgba(0,0,0,0.4),rgba(0,0,0,0.1));border-right:1px solid rgba(255,255,255,0.05)}
 .book-cover-content{position:absolute;inset:0;padding:48px 32px 48px 44px;display:flex;flex-direction:column;justify-content:center}
 .book-cover-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--accent-400);margin-bottom:24px}
@@ -153,6 +154,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   .nav-links{position:fixed;top:72px;left:0;right:0;flex-direction:column;gap:24px;padding:32px 24px;background:rgba(7,11,20,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transform:translateY(-150%);transition:transform var(--transition)}
   .nav-links.open{transform:translateY(0)}
   .nav-toggle{display:flex}
+  .brand-logo{width:170px;height:54px}
   .topics-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
   .subscribe-card{padding:40px 24px}
@@ -169,8 +171,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 <nav class="navbar" id="navbar">
   <div class="nav-container">
     <a href="/" class="nav-logo">
-      <span class="logo-mark">O</span>
-      <span class="logo-text">Ordinix</span>
+      <img class="brand-logo" src="/ordinix-logo.webp" alt="Ordinix Limited">
     </a>
     <div class="nav-links" id="navLinks">
       <a href="/" class="nav-link">Home</a>
@@ -193,13 +194,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     <div class="book-hero-content">
       <div class="book-cover reveal">
         <div class="book-cover-face">
-          <div class="book-cover-spine"></div>
-          <div class="book-cover-content">
-            <span class="book-cover-label">A Book by Ordinix</span>
-            <h2 class="book-cover-title">Evolve<br>Or Die</h2>
-            <div class="book-cover-line"></div>
-            <span class="book-cover-sub">The Architect's Guide to Digital Transformation</span>
-          </div>
+          <img class="book-cover-image" src="/EvolveOrDie.png" alt="Evolve Or Die book cover">
           <div class="book-cover-shadow"></div>
         </div>
       </div>
@@ -322,8 +317,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="nav-logo">
-          <span class="logo-mark">O</span>
-          <span class="logo-text">Ordinix</span>
+          <img class="brand-logo" src="/ordinix-logo.webp" alt="Ordinix Limited">
         </a>
         <p class="footer-tagline">Principal Architect &amp; Strategic Advisory</p>
       </div>
